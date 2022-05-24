@@ -1,0 +1,8 @@
+coverage/
+dist/
+config/
+node_modules/
+linter-rules/
+__tests__/
+.eslintrc.js
+jest.config.js

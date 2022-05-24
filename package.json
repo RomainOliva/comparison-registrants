@@ -1,0 +1,59 @@
+{
+  "name": "comparison-registrants",
+  "version": "1.0.0",
+  "main": "index.js",
+  "private": true,
+  "license": "UNLICENSED",
+  "scripts": {
+    "build": "rm -rf ./dist && tsc",
+    "prepare": "husky install",
+    "lint": "yarn lint:eslint && yarn lint:prettier",
+    "lint:eslint": "eslint --cache --color  \"**/*.{ts,tsx}\"",
+    "lint:eslint:fix": "yarn lint:eslint --fix",
+    "lint:prettier": "yarn prettier -l \"**/*.{ts,md,json,yml,yaml}\"",
+    "lint:prettier:fix": "yarn prettier --write \"**/*.{ts,md,json,yml,yaml}\"",
+    "lint:fix": "yarn lint:eslint:fix && yarn lint:prettier:fix",
+    "lint-staged": "lint-staged",
+    "ci": "yarn build && yarn lint && yarn test",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:RomainOliva/comparison-registrants.git"
+  },
+  "prettier": {
+    "printWidth": 80,
+    "tabWidth": 2,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "all",
+    "bracketSpacing": true,
+    "arrowParens": "avoid"
+  },
+  "dependencies": {
+    "@netlify/functions": "^1.0.0",
+    "axios": "^0.21.1",
+    "dotenv": "^10.0.0",
+    "lambda-multipart-parser": "^1.0.1",
+    "lint-staged": "^10.5.4",
+    "lodash": "^4.17.21",
+    "ts-http-errors": "^1.0.0",
+    "typescript": "^4.6.2"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "@types/lodash": "^4.14.179",
+    "@types/node": "^16.11.7",
+    "@typescript-eslint/eslint-plugin": "^5.12.1",
+    "@typescript-eslint/parser": "^5.12.1",
+    "eslint": "7.1.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-import-resolver-typescript": "2.0.0",
+    "eslint-plugin-import": "2.20.2",
+    "eslint-plugin-jest": "23.11.0",
+    "eslint-plugin-prettier": "3.1.3",
+    "husky": "^7.0.0",
+    "prettier": "^2.5.1"
+  }
+}

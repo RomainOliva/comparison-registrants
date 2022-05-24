@@ -1,0 +1,4 @@
+{
+  "*.js": ["eslint --format table --fix"],
+  "*.{js,ts,json,css,scss,md,yml}": "prettier --write"
+}

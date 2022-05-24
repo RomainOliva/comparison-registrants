@@ -1,0 +1,10 @@
+coverage
+.github
+husky
+dist
+config
+node_modules
+linter-rules
+CHANGELOG.md
+.eslintrc.js
+postman.json
